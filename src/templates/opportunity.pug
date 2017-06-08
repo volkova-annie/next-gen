@@ -1,0 +1,53 @@
+.container
+  .row
+    .col-sm-5.col-md-7
+      h1.slider-heading
+        | Новые возможности с курсом SAP
+        br
+        | 					TERP10 «Интеграция бизнес-процессов»
+      .dates
+        i.fa.fa-calendar-check-o
+        |  3 - 14 Июля 2017
+    .col-sm-7.col-md-5
+      form#letter_form.appl-form(action='', method='post')
+        .form-group
+          label(for='appl-name')
+            | Имя, фамилия:
+            span.star *
+          input(type='text', name='participants_name')
+        .form-group
+          label(for='appl-tel')
+            | Мобильный телефон:
+            span.star *
+          input(type='text', name='participants_phone')
+        .form-group
+          label(for='appl-email')
+            | Email:
+            span.star *
+          input(type='text', name='participants_email')
+        .form-group
+          label
+            | Вы:
+            span.star *
+          label.appl-check(for='appl-student')
+            input.icheck(type='checkbox', value='1', name='participants_is_stud')
+            |  Студент
+          label.appl-check(for='appl-asp')
+            input.icheck(type='checkbox', value='1', name='participants_is_abit')
+            |  Аспирант
+          label.appl-check(for='appl-teacher')
+            input.icheck(type='checkbox', value='1', name='participants_is_teach')
+            |  Преподаватель
+        .form-group
+          .col-md-8.col-xs-6.code
+            label
+              | Код:
+              span.star *
+            input.not_ins(type='text', name='part_code')
+          .col-md-4.col-xs-6
+            label.refresh(style='cursor:pointer;') Обновить?
+            span.picture.refresh
+        .appl-popover(data-toggle='popover', title='', data-content='В соответствии с правилами компании SAP, курс TERP10 является частью программы по обучению студентов и преподавателей решениям SAP. Чтение курсов по SAP для других категорий слушателей осуществляют учебные центры вендора', placement='left') i
+        input.btn.btn-ui(type='submit', value='Записаться на курс')
+.scroll-arrow.hidden-lg-down
+  i.fa.fa-chevron-down
